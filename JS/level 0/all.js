@@ -220,7 +220,7 @@
 // p.addProject(new Project("Basic Store", ["AngularJS", "PHP"]));
 // p.addProject(new Project("Social Network", ["Node.js", "React.js"]));
 // p.addProject(new Project("3D Snake Game", ["JS", "Canvas","CSS3"]));
-// p.toString() 
+// p.toString();
 // ֆունկցիան կանչելու դեպքում էկրանին կհայտնվի ծրագրավորողի տվյալը։
 
 // Առաջադրանքներ 07: setTimeout և setInterval՝
@@ -229,4 +229,4 @@
 // գեներացնում է պատահական թիվ (Math.random()), եթե գեներացված թիվը գտնվում է a-ից b միջակայքում  ապա Promise-ի  resolve-ի միջոցով վերադարձնում է (return) արդյունքը:
 // async function Spinner(a, b) ֆունկցիայի մեջ անհրաժեշտ է 5 անգամ կանչել getRandomNumber(a, b); ֆունկցիան, և վերջում համեմատել վերադարձրած արժեքները,
 // եթե բոլորը արժեքները մինյանց հավասար են, ապա alert-ի կամ document.write-ի միջոցով էկրանին տպել "WIN!!!!", եթե ոչ` "LOSE!!!!".
-// Spinner(1,1) -ի դեպքում հաղթելու հավանականությունը կլինի 100%, իսկ Spinner(1,2) -ի դեպքում՝ 6.25%
+// Spinner(1,1) -ի դեպքում հաղթելու հավանականությունը կլինի 100%, Spinner(1,2) -ի դեպքում՝ 50%, իսկ Spinner(1,6) -ի դեպքում՝ 0.1667%
