@@ -229,4 +229,70 @@
 // գեներացնում է պատահական թիվ (Math.random()), եթե գեներացված թիվը գտնվում է a-ից b միջակայքում  ապա Promise-ի  resolve-ի միջոցով վերադարձնում է (return) արդյունքը:
 // async function Spinner(a, b) ֆունկցիայի մեջ անհրաժեշտ է 5 անգամ կանչել getRandomNumber(a, b); ֆունկցիան, և վերջում համեմատել վերադարձրած արժեքները,
 // եթե բոլորը արժեքները մինյանց հավասար են, ապա alert-ի կամ document.write-ի միջոցով էկրանին տպել "WIN!!!!", եթե ոչ` "LOSE!!!!".
-// Spinner(1,1) -ի դեպքում հաղթելու հավանականությունը կլինի 100%, Spinner(1,2) -ի դեպքում՝ 50%, իսկ Spinner(1,6) -ի դեպքում՝ 0.1667%
+// Spinner(1,1) -ի դեպքում հաղթելու հավանականությունը կլինի 100%, իսկ Spinner(1,2) -ի դեպքում՝ 6.25%
+// --------------------------------------------------------------------------------------------------------------------------------------
+// Առաջադրանք 2: Ստեղծել սուրճի մեքենայի իմիտացիա, որը կստանա պատվերներ տարբեր տեսակի սուրճերի համար և կցուցադրի պատրաստման գործընթացը քայլ առ քայլ։
+// Օգտագործողը կարող է պատվիրել երեք տեսակի սուրճ՝ espresso, latte կամ cappuccino։ Եթե օգտվողը փորձի պատվիրել անթույլատրելի տեսակի սուրճ (օրինակ, "tea"), 
+// սուրճի մեքենան պետք է տեղեկացնի դրա մասին։
+// Ստեղծեք makeCoffee(coffeeType) ֆունկցիա, որը ստանում է մեկ փոփոխական՝ սուրճի տեսակը(անունը)։ Եթե սուրճի տեսակը անթույլատրելի է, ֆունկցիան պետք է վերադարձնի սխալ։
+// Օգտագործեք console.log() հաղորդագրությունները ցուցադրելու համար։
+// Ցուցադրեք սուրճ պատրաստելու քայլերը, ինչպիսիք են՝ "Տեղադրում ենք բաժակը", "Լցնում ենք ջուր", "Ավելացնում ենք սուրճ", "Ավելացնում ենք շաքարավազ", "Խառնում ենք"
+// Պատվերները պետք է իրականացվեն սինխրոն։ Անհրաժեշտ է օգտագործել async/await ասինխրոն գործողությունները կառավարելու համար։
+// Հուշում՝ վերհիշեք Promise((reslove, reject) => {})
+// Նմուշ։ https://prnt.sc/6lfd6NFlhYX8
+
+
+
+// function makeCoffee(coffeeType) {
+//     return new Promise((resolve, reject) => {
+//       const validCoffeeTypes = ["espresso", "latte", "cappuccino"];
+  
+//       if (!validCoffeeTypes.includes(coffeeType)) {
+//         reject(`Սարքը չի կարող տրամադրել ${coffeeType}։`);
+//       } else {
+//         const steps = ["Տեղադրում ենք բաժակը։", "Լցնում ենք ջուր։", "Ավելացնում ենք սուրճ։"];
+  
+//         if (coffeeType === "latte" || coffeeType === "cappuccino") {
+//           steps.push("Ավելացնում ենք շաքարավազ։");
+//         }
+  
+//         steps.push("Խառնում ենք։");
+//         steps.push(
+//           `Ձեր ${coffeeType.charAt(0).toUpperCase() + coffeeType.slice(1)}-ն պատրաստ է!`
+//         );
+  
+//         let stepIndex = 0;
+  
+//         const interval = setInterval(() => {
+//           console.log(steps[stepIndex]);
+//           stepIndex++;
+  
+//           if (stepIndex === steps.length) {
+//             clearInterval(interval);
+//             setTimeout(() => resolve(steps[steps.length - 1]), 1000);
+//           }
+//         }, 1000); // 1 վարկյան
+//       }
+//     });
+//   }
+  
+//   // Պատվերի գրանցման ֆունկցիա
+//   async function orderCoffee(coffeeType) {
+//     try {
+//       console.log(`Դուք պատվիրել եք՝ ${coffeeType}։`);
+//       await makeCoffee(coffeeType);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
+  
+//   // Պատվերների սինխրոնիզացված կանչ
+//   async function processOrders() {
+//     await orderCoffee("espresso"); // առանց շաքարավազի
+//     await orderCoffee("latte");
+//     await orderCoffee("cappuccino");
+//     await orderCoffee("tea");
+//   }
+  
+//   processOrders();
+  
