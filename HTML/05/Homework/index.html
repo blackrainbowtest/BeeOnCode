@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #main {
+            font-size: 0;
+        }
+
+        #main div {
+            vertical-align: bottom;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            text-align: center;
+        }
+
+        #div1 {
+            background-color: #C9316C;
+            height: 80px;
+            width: 150px;
+            font-size: 16px;
+        }
+
+        #div2 {
+            background-color: #CA319D;
+            height: 160px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        #div3 {
+            background-color: #ED6F63;
+            height: 320px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        #div4 {
+            background-color: #EFC437;
+            height: 80px;
+            width: 150px;
+            font-size: 16px;
+        }
+
+        #div5 {
+            background-color: #538C45;
+            height: 80px;
+            width: 150px;
+            font-size: 16px;
+        }
+
+        #div6 {
+            background-color: #267D87;
+            height: 80px;
+            width: 150px;
+            font-size: 16px;
+        }
+
+        #div7 {
+            background-color: #799A29;
+            height: 80px;
+            width: 150px;
+            font-size: 16px;
+        }
+
+        #div8 {
+            background-color: #478755;
+            height: 80px;
+            width: 150px;
+            font-size: 16px;
+        }
+
+        #div9 {
+            background-color: #2FC9C1;
+            height: 80px;
+            width: 150px;
+            font-size: 16px;
+        }
+
+        #div10 {
+            background-color: #31C990;
+            height: 80px;
+            width: 150px;
+            font-size: 16px;
+        }
+
+        #div11 {
+            background-color: #534078;
+            height: 80px;
+            width: 450px;
+            font-size: 16px;
+        }
+
+        #div12 {
+            background-color: #DD212F;
+            height: 80px;
+            width: 150px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>display: block, inline, inline-block</h1>
+    <br>
+    <div id="main">
+        <div style="display: inline-block;">
+            <div style="display: inline-block;">
+                <div style="display: inline-block;">
+                    <div id="div1">
+                        <h2>1</h2>
+                        <p>color: #C9316C</p>
+                        <p>size: 150x80</p>
+                    </div>
+                    <div id="div5">
+                        <h2>5</h2>
+                        <p>color: #538C45</p>
+                        <p>size: 150x80</p>
+                    </div>
+                    <div id="div7" style="display: inline-block;">
+                        <h2>7</h2>
+                        <p>color: #799A29</p>
+                        <p>size: 150x80</p>
+                    </div>
+                </div>
+                <div style="display: inline-block;">
+                    <div id="div2">
+                        <h2>2</h2>
+                        <p>color: #CA319D</p>
+                        <p>size: 300x160</p>
+                    </div>
+                    <div id="div8" style="display: inline-block;">
+                        <h2>8</h2>
+                        <p>color: #478755</p>
+                        <p>size: 150x80</p>
+                    </div>
+                    <div id="div9" style="display: inline-block;">
+                        <h2>9</h2>
+                        <p>color: #2FC9C1</p>
+                        <p>size: 150x80</p>
+                    </div>
+                </div>
+            </div>
+            <div id="div11">
+                <h2>11</h2>
+                <p>color: #534078</p>
+                <p>size: 450x80</p>
+            </div>
+        </div>
+        <div style="display: inline-block;">
+            <div id="div3" style="display: inline-block;">
+                <h2>3</h2>
+                <p>color: #ED6F63</p>
+                <p>size: 150x80</p>
+            </div>
+            <div style="display: inline-block;">
+                <div id="div4">
+                    <h2>4</h2>
+                    <p>color: #EFC437</p>
+                    <p>size: 150x80</p>
+                </div>
+                <div id="div6">
+                    <h2>6</h2>
+                    <p>color: #267D87</p>
+                    <p>size: 150x80</p>
+                </div>
+                <div id="div10">
+                    <h2>10</h2>
+                    <p>color: #31C990</p>
+                    <p>size: 150x80</p>
+                </div>
+                <div id="div12">
+                    <h2>12</h2>
+                    <p>color: #DD212F</p>
+                    <p>size: 150x80</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: block;">
+        <div style="display: inline-block;"></div>
+        <div style="display: inline-block;"></div>
+    </div>
+</body>
+
+</html>
