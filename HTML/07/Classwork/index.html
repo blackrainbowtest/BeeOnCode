@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<title>Menu(Checked)</title>
-	<style>
-		input[type=checkbox] {
-			display: none;
-		}
-
-		.submenu {
-			width: 200px;
-			height: 200px;
-			background-color: orange;
-			display: none;
-		}
-
-		input[type=checkbox]:checked~.submenu {
-			display: block;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-	<label for="check">Click me</label>
-	<input type="checkbox" id="check">
-	<div class="submenu"></div>
+    <div class="menu">
+        <div class="menu-item">ANIMALS</div>
+        <div class="menu-item">NAMES</div>
+        <div class="menu-item">THINGS</div>
+        <div class="menu-item">MOVIES</div>
+    </div>
 </body>
-
 </html>
