@@ -3,3 +3,67 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+/* Ոճավորում է յուրաքանչյուր <p> տարրի առաջին տողը */
+p::first-line {
+	color: blue;
+}
+
+/* Ոճավորում է <p> տարրի առաջին տառը */
+p::first-letter {
+	color: red;
+}
+
+/* Ընտրված տեքստի ոճավորում */
+::selection {
+	background-color: yellow;
+}
+
+/* Հղումից առաջ ավելացնում է բովանդակություն */
+a::before {
+	content: "↗ ";
+}
+
+/* Հղումից հետո ավելացնում է բովանդակություն */
+a::after {
+	content: " ↘";
+}
+
+/* Չայցելված հղումներ */
+a:link {
+	color: blue;
+}
+
+/* Այցելած հղումներ */
+a:visited {
+	color: rgb(98, 0, 128);
+}
+
+/* Մկնիկով տեգի վրան պահելիս */
+a:hover {
+	color: orange;
+}
+
+/* Տեգի վրա քլիկ անելիս */
+a:active {
+	color: red;
+}
+
+input:checked {
+	background-color: lightblue;
+}
+
+/* Ցուցակում առաջին դուստրը */
+li:first-child {
+	color: red;
+}
+
+/* Վերջին դուստրը */
+li:last-child {
+	color: blue;
+}
+
+/* Յուրաքանչյուր զույգ տեգը */
+li:nth-child(even) {
+	background-color: lightgray;
+}
