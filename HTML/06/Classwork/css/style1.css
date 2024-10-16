@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    width: 300px; /* фиксированная ширина контейнера */
+    height: 100px; /* фиксированная высота контейнера */
+    border: 2px solid #333;
+    margin-bottom: 20px;
+    padding: 10px;
+    overflow: hidden; /* По умолчанию установлено на hidden */
+}
+
+.hidden {
+    overflow: hidden; /* Обрезает контент, который выходит за пределы */
+}
+
+.clip {
+    overflow: clip; /* Обрезает контент, не создавая контекст прокрутки */
+}

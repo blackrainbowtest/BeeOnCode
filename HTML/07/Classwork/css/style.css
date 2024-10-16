@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-item {
+	position: relative;
+	padding: 15px 30px;
+	margin: 0 5px;
+	background-color: #4CAF50;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 75%, 0% 100%);
+	transition: all 0.3s ease;
+	z-index: 1; /* Обязательно установите z-index */
+	overflow: visible; /* Позволяет треугольнику быть видимым */
+}
+
+.menu-item:hover {
+	clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%); /* Становится квадратом */
+}
+
+.menu-item::before {
+	content: '';
+	position: absolute;
+	background-color: #b80d0d;
+	transition: height 0.3s ease; /* Плавный переход высоты */
+	left: 0;
+	right: 0;
+	bottom: -10px; /* Позиционируем снизу */
+	height: 0; /* Высота по умолчанию 0 */
+	clip-path: polygon(0% 0%, 100% 0, 50% 100%); /* Треугольник */
+	z-index: -1; /* Устанавливаем z-index ниже основного элемента */
+}
+
+.menu-item:hover::before {
+	height: 10px; /* Высота треугольника при наведении */
+}
+
+
+
+
+.menu-item:nth-child(2) {
+    background-color: #2196F3;
+}
+
+.menu-item:nth-child(3) {
+    background-color: #f44336;
+}
+
+.menu-item:nth-child(4) {
+    background-color: #ff9800;
+}
+
+
+/* Добавляем псевдоэлемент для эффекта
+.menu-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 10px;
+    background-color: #b80d0d; /* Цвет фона между вкладками */
+    /* clip-path: polygon(0 100%, 50% 0, 100% 100%);
+    transition: all 0.3s ease; */
+/* } */
+
+/* Эффект при наведении */
+/* .menu-item:hover::before {
+    bottom: -15px;
+    clip-path: polygon(0 100%, 50% -50%, 100% 100%);
+} */

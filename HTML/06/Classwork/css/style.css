@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: rgba(0, 0, 255, .2);
+    border: 3px solid #00f;
+    float: left;
+    width: 65px;
+    height: 65px;
+}
+
+.yellow {
+    background-color: #ff0;
+    border: 3px solid red;
+    z-index: 1;
+    position: sticky;
+    top: 0;
+}
+
+.box:not(:first-child) {
+    margin-left: 10px;
+}
