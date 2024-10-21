@@ -1,0 +1,60 @@
+.div1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.div2 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  position: sticky;
+  top: 10px;
+  bottom: 10px;
+
+}
+
+.div1 .div3:nth-last-child(1) {
+  background-color: rgb(255, 195, 42);
+  bottom: -10px;
+  right: -10px;
+  z-index: 1;
+}
+
+.div3 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  bottom: -50px;
+  right: 10px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.div4 {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(201, 34, 145);
+  position: fixed;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+}
+
+.div{
+  height: 200px;
+  width: 200px;
+  background-color: blanchedalmond;
+}
+
+.div10{
+  height: 200px;
+  width: 200px;
+  background-color: rgb(87, 86, 86);
+}
+

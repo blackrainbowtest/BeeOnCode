@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-image: url(./img/3.jpg);
+
+  border: 1px solid black;
+  clip-path: polygon(25% 25%, 25% 0%, 75% 0%, 75% 25%,
+                    100% 25%, 100% 75%, 75% 75%, 75% 100%,
+                    25% 100%, 25% 75%, 0% 75%, 0% 25%);
+}
+
+p {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+p::first-line {
+  color: brown;
+}
+
+p::first-letter {
+  font-size: 50px;
+  color: blue;
+}
+
+p::selection {
+  background-color: rgba(137, 43, 226, 0.623);
+  color: blue;
+}
+
+a {
+  font-size: 50px;
+}
+
+a::before {
+  content: "+";
+}
+
+a::after {
+  content: "*";
+}
+
+a:active {
+  color: rgb(189, 31, 31);
+  background-color: pink;
+}
+
+a:visited {
+  color: aqua;
+}
+
+a:hover {
+  text-shadow: 1px 1px 10px black;
+}
+
+a:active {
+  color: green;
+} 
+
+input[type=checkbox]{
+  width: 50px;
+  height: 50px;
+}
+
+input[type=checkbox]:checked {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(9, 9, 15);
+}
+
+input[type=checkbox]:checked ~ ul {
+  display: block;
+}
+
+ul {
+  display: none;
+}
+
+li {
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+li:first-child {
+  color: blueviolet;
+}
+
+li:last-child {
+  color: chocolate;
+}
+
+li:nth-child(2) {
+  background-color: aqua;
+}
+
+input[type=text] {
+  width: 55%;
+  height: 50px;
+  font-size: 40px;
+}
+
+input[type=text]:focus {
+  background-color: darkslategray;
+  color: aqua;
+}
+
+input[type=text]::selection {
+  color: gold;
+}
+
+input[type=text]:required {
+  background-color: brown;
+}
+
+span {
+  display: block;
+  width: 300px;
+  height: 200px;
+  font-size: 20px;
+  overflow: auto;
+  border: 2px solid blue;
+  
+}
+
+span::-webkit-scrollbar {
+  width: 10px;
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+
+span::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+  border-radius: 5px;
+}
+
