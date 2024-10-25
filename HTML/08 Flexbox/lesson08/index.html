@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex vs Inline-Flex</title>
+<style>
+  .container-flex {
+    display: flex;
+    background-color: lightblue;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .container-inline-flex {
+    display: inline-flex;
+    background-color: lightcoral;
+    padding: 10px;
+  }
+
+  .item {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+
+<h3>display: flex կոնտեյներ</h3>
+<div class="container-flex">
+  <div class="item">Flex տարր 1</div>
+  <div class="item">Flex տարր 2</div>
+  <div class="item">Flex տարր 3</div>
+</div>
+<p><strong>display: flex</strong> կոնտեյները զբաղեցնում է ողջ լայնությունը և տեղակայցում է առանձին տողում</p>
+
+<h3>display: inline-flex կոնտեյներ</h3>
+<div class="container-inline-flex">
+  <div class="item">Inline Flex տարր</div>
+  <div class="item">Inline Flex տարր</div>
+</div>
+<p><strong>display: inline-flex</strong> կոնտեյները զբաղեցնում է իր համար անհրաժեշտ տարածքը։</p>
+
+
+<h3>align-items: stretch (լռելյայն արժեք)</h3>
+<div class="container-default">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+
+<style>
+  .container-default {
+    display: flex;
+    height: 200px;
+    background-color: lightblue;
+  }
+  .item {
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+  }
+</style>
+
+<h3>align-items: flex-start</h3>
+<div class="container-start">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+
+<style>
+  .container-start {
+    display: flex;
+    align-items: baseline;
+    height: 200px; /* Կոնտեյների բարձրությունը ավելի մեծ է քան մեր դուստր տարրերը */
+    background-color: lightcoral;
+  }
+  .item {
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+  }
+</style>
+
+<h3>align-items: baseline</h3>
+<div class="container-baseline">
+  <div class="item">Short</div>
+  <div class="item">Medium text</div>
+  <div class="item large">Larger text size</div>
+</div>
+
+<style>
+  .container-baseline {
+    display: flex;
+    align-items: baseline;
+    height: 150px;
+    background-color: lightgray;
+  }
+  .item {
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+  }
+  .large {
+    font-size: 24px; /* Տառաչափը փոփոխում ենք որ տարբերությունը տեսնենք */
+  }
+</style>
+
+
+
+</body>
+</html>
