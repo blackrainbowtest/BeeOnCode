@@ -1,0 +1,10 @@
+@font-face {
+	/* Ֆոնթի անվանումը */
+	font-family: 'MyCustomFont';
+	/* Ֆոնթի հասցեն */
+	src: url('../fonts/Averia-Bold.ttf');
+}
+
+h1 {
+	font-family: 'MyCustomFont', sans-serif;
+}
