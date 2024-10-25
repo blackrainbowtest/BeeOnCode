@@ -105,4 +105,30 @@
 	animation-iteration-count: 2;
 	animation-direction: alternate;
 	animation-fill-mode: backwards;
+
+}
+
+
+
+/* Prespective */
+.container {
+    perspective: 1000px; /* Устанавливаем перспективу */
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    transform-style: preserve-3d; /* Позволяет дочерним элементам сохранять 3D-преобразования */
+    animation: rotate 5s infinite linear; /* Анимация вращения */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg); /* Указываем вращение вокруг осей X и Y */
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg); /* Вращаем на 360 градусов вокруг обеих осей */
+    }
+		transform: skewX(0deg)
 }
