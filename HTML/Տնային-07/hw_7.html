@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .drop {
+        position: relative;
+        display: inline-block;
+    }
+
+    .drop1 {
+        position: absolute;
+        display: inline-block;
+    }
+
+    .M0_drop {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .M0_drop a {
+        color: black;
+        padding: 10px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+
+    .M0_drop a:hover {
+        background-color: blueviolet;
+    }
+
+
+    .drop:hover .M0_drop {
+        display: block;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+
+
+
+
+    nav {
+        background-color: #cdcd25;
+        height: 50px;
+    }
+
+    .menu-item {
+        width: 150px;
+        height: 40px;
+        background-color: #25fcfc;
+        text-align: center;
+        /* position: relative; */
+        border: 1px solid black;
+    }
+
+    nav>div {
+        display: inline-block;
+    }
+
+    .unhide {
+        display: none;
+        min-width: 150px;
+        position: absolute;
+        top: -1px;
+        right: -150px;
+    }
+
+    .menu-item:hover>.unhide {
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="menu-item">
+            Menu - 0
+
+        </div>
+        <div class="menu-item">
+            Menu - 0
+
+        </div>
+        <div class="menu-item">
+            Menu - 0
+            <div class="unhide">
+                <div class="menu-item">
+                    Menu - 1
+                    <div class="unhide">
+                        <div class="menu-item">
+                            Menu - 2
+                        </div>
+                        <div class="menu-item">
+                            Menu - 2
+                        </div>
+                        <div class="menu-item">
+                            Menu - 2
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    Menu - 1
+                </div>
+                <div class="menu-item">
+                    Menu - 1
+                    <div class="unhide">
+                        <div class="menu-item">
+                            Menu - 2
+                        </div>
+                        <div class="menu-item">
+                            Menu - 2
+                        </div>
+                        <div class="menu-item">
+                            Menu - 2
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <button class="M0">MENU-0</button>
+    <button class="M0">MENU-0</button>
+    <div class="drop">
+        <button class="M0">MENU-0</button>
+        <div class="M0_drop">
+            <a href="#">MENU1</a>
+            <a href="#">MENU1</a>
+            <a href="#">MENU1</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
