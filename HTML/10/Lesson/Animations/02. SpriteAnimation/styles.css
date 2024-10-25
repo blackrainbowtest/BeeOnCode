@@ -1,0 +1,26 @@
+.sprite {
+	/* Կադրի լայնություն */
+	width: 260px;
+	/* Կադրի բարձրություն */
+	height: 250px;
+	/* Սահմանում ենք նկարի հղումը */
+	background-image: url('../CSS-Sprites.png');
+	/* Ֆոնային նկարը ֆիքսում ենք հիմնական դիրքով */
+	background-position: 0px 0px;
+	/* play անունով անիմացիան աշխատելու է 6 կադրով
+	   այլ կերպ ասած տվյալ պարագայում աշխատելու է 
+	   0%, 25%, 50%, 75%, 100%;
+	*/
+	animation: play 1s steps(6) infinite;
+	/* border: 1px solid black; */
+}
+
+@keyframes play {
+	from {
+		background-position: 0;
+	}
+
+	to {
+		background-position: -1560px;
+	}
+}

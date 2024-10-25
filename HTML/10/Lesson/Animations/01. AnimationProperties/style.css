@@ -2,21 +2,24 @@
    անունով պետք է կանչվի անւմացիան
 */
 @keyframes animationName {
+
 	/* անիմացիայի սկզբ */
-	from {
+	from {}
 
-	}
 	/* անիմացիայի ավարտ */
-	to {
+	to {}
 
-	}
 	/* կադրերի տոկոսային նշում */
-	25%, 50%, 75% {
-		
-	}
+	25%,
+	50%,
+	75% {}
 }
 
 .test {
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+
 	/* Այն անիմացիայի անունը, որը կկիրառվի տեգի վրա */
 	animation-name: animationName;
 	/* ժամանակահատվածը, որի ընթացկում պետք է կատարվի անիմացիան */
@@ -66,6 +69,20 @@
 	animation-fill-mode: backwards;
 	/* պահպանում է առաջին կադրի և վերջին կադրի հատկությունները */
 	animation-fill-mode: both;
+	/* Կակտիվանա օրինակ :hover ի ժամանակ */
+	/* Գործողության ժամանակ որ հատկություննը պետք է փոփոխվի */
+	transition-property: background-color, transform;
+	/* Որքան է տևելու փոփոխությունը վարկյաններով */
+	transition-duration: 0.5s;
+	/* Անիմացիան արագության փոփոխության տիպը */
+	transition-timing-function: ease;
+	/* Որքան դադար լինի մինչև անիմացիայի սկիզբը */
+	transition-delay: 0.1s;
+}
+
+.test:hover {
+	background-color: #e74c3c;
+	transform: scale(1.2);
 }
 
 @keyframes move {
@@ -89,71 +106,3 @@
 	animation-direction: alternate;
 	animation-fill-mode: backwards;
 }
-
-
-/*
-
-2. Անցում (Transition)
-CSS Transition-ը թույլ է տալիս էլեմենտին շարժվել որոշակի ժամանակ, որոշակի քանակությամբ, և այդ ընթացքում փոփոխել իր հատկությունները։ Սա տեղի է ունենում pseudo-կլասով հայտարարված որևէ իրադարձության ընթացքում (օրինակ՝ :hover):
-
-Անցման հիմնական հատկություններ
-transition-property - Գործողություն կատարելու ժամանակ փոփոխվող հատկությունների անվանումները։
-transition-duration - Գործողության տևողությունը։
-transition-timing-function - Անիմացիայի արագության փոփոխությունները։
-transition-delay - Դադարի ժամանակը՝ արժեքը եթե կա։
-Օրինակ
-css
-Copy code
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  transition: width 2s, height 2s;
-}
-
-.box:hover {
-  width: 200px;
-  height: 200px;
-}
-3. Sprite
-Sprite-ը համարվում է շարժական պատկերներ ստանալու մեթոդներից մեկը։ Սա մի գրաֆիկական պատկեր է, որն իր մեջ պարունակում է անիմացիայի բոլոր կադրերը, և տարբեր հատկություններով կարելի է կառավարել այդ կադրերի աշխատանքը՝ արագությունը, շարժը, կադրերի քանակը։
-
-Sprite ստեղծելու քայլերը
-Նկարը բեռնել։
-Ստանալ կադրի չափերը՝ լայնությունն ու բարձրությունը։
-Միացնել նկարի բոլոր կադրերը, օգտագործելով անիմացիայի հատկությունները՝ անվանումը, տևողությունը, կադրերի քանակը (step())։
-Օրինակ
-css
-Copy code
-.sprite {
-  width: 100px; /* Կադրի լայնություն */
-  height: 100px; /* Կադրի բարձրություն */
-  background-image: url('sprite.png');
-  animation: play 1s steps(4) infinite; /* 4 կադր */
-}
-
-@keyframes play {
-  from { background-position: 0; }
-  to { background-position: -400px; } /* Անիմացիայի ավարտի դիրքը */
-}
-4. @font-face կանոնակարգ
-Այս կանոնակարգը թույլ է տալիս ընտրել ոչ ստանդարտ տառատեսակներ՝ բեռնել դրանք, անվանում որոշել և միացնել նախագծին։
-
-Օրինակ
-css
-Copy code
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('mycustomfont.woff2') format('woff2'),
-       url('mycustomfont.ttf') format('truetype');
-}
-
-body {
-  font-family: 'MyCustomFont', sans-serif;
-}
-5. HTML5-ի մի քանի թեգեր
-HTML5-ը առաջարկում է մի շարք նոր թեգեր, որոնք բարելավում են վեբ էջերի կառուցվածքը և մատչելիությունը։ Մի քանի կարևոր թեգեր են՝ header, footer, article, section, nav, aside։
-
-Կոնքլուզիա
-Այս դասի ընթացքում մենք ուսումնասիրեցինք CSS անիմացիաների հիմունքները, ինչպես նաև անցումների և sprite-ի ստեղծման մեթոդները։ Նրանց օգտագործումը կարող է խթանել կայքի ինտերակտիվությունը և գրավչությունը։ Անիմացիաները պետք է օգտագործվեն չափավոր՝ կայքի արագագործության պահպանման համար։
-*/
