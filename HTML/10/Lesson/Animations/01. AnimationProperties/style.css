@@ -130,5 +130,5 @@
     100% {
         transform: rotateX(360deg) rotateY(360deg); /* Вращаем на 360 градусов вокруг обеих осей */
     }
-		transform: skewX(0deg)
+		/* transform: skewX(0deg) */
 }
