@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (min-width: 768px) and (orientation: landscape) {
+            .container {
+                min-width: 150px;
+                min-height: 150px;
+            }
+
+            /* Այս ոճերը կկիրառվեն, երբ էկրանի լայնությունը 768px-ից մեծ է և դիրքը հորիզոնական է */
+            .container {
+                background-color: lightgreen;
+                font-size: 20px;
+            }
+
+            @media not all and (max-width: 600px) {
+
+                /* Այս ոճերը կկիրառվեն, եթե էկրանի լայնությունը 600px-ից մեծ է */
+                .container {
+                    background-color: lightblue;
+                }
+            }
+
+            @media only screen and (min-width: 1024px) {
+
+                /* Այս ոճերը կկիրառվեն միայն էկրանների վրա, երբ լայնությունը 1024px կամ ավելի է */
+                .container {
+                    background-color: lightcoral;
+                    font-size: 22px;
+                }
+            }
+
+            @media only screen and (min-width: 768px) and (max-width: 1200px) and (orientation: portrait) {
+
+                /* Այս ոճերը կկիրառվեն միայն այն ժամանակ, երբ էկրանը portrait դիրքում է,
+       լայնությունը՝ 768px-ից մեծ և 1200px-ից փոքր */
+                .container {
+                    background-color: lightyellow;
+                    font-size: 18px;
+                }
+            }
+
+            @media screen,
+            print {
+
+                /* Այս ոճերը կկիրառվեն և՛ էկրանին, և՛ տպման ժամանակ */
+                body {
+                    font-size: 16px;
+                    color: #333;
+                }
+            }
+
+            @media (max-width: 600px),
+            (min-width: 1200px) {
+
+                /* Այս ոճերը կկիրառվեն, եթե էկրանի լայնությունը 600px-ից փոքր է կամ 1200px-ից մեծ */
+                .container {
+                    background-color: lightblue;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">555</div>
+</body>
+
+</html>

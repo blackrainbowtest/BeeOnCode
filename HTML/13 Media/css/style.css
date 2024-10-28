@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div1 {
+    background: #252500;
+    color: gray;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+    .div1 {
+        background: #2525ff;
+        color: gray;
+        padding: 1rem;
+    }
+}
