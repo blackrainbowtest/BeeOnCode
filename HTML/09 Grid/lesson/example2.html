@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style_example2.css">
+	<title>Example2</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.d-flex {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			position: relative;
+			z-index: 2;
+		}
+
+		/* Կոնտեյներ (container) - տեգ է, որը ունի display: */
+		.container {
+			display: grid;
+			grid-template-columns: repeat(3, 150px);
+			grid-gap: 10px;
+		}
+
+		/* Պարունակություն (Item) - container -ի դուստր տեգ է */
+		.item {
+			width: 150px;
+			height: 150px;
+			border: 1px solid black;
+			border-radius: 15px;
+			background-color: gray;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 800;
+			transition: .5s;
+			font-size: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="d-flex">
+		<!-- Grid lines -->
+		<input type="checkbox" id="togglegridCell">
+		<label id="labelgridCell" for="togglegridCell">Ցուցադրել Grid Cell</label>
+
+		<div class="container">
+			<div class="item">Grid item</div>
+			<div class="item" id="secondItem">Grid item</div>
+			<div class="item">Grid item</div>
+			<div class="item">Grid item</div>
+			<div class="item">Grid item</div>
+			<div class="item">Grid item</div>
+		</div>
+
+		<!-- Grid lines -->
+		<input type="checkbox" id="toggleLines" class="toggle-checkbox">
+		<label id="label" for="toggleLines">Ցուցադրել Grid lines</label>
+
+		<!-- հորիզոնական grid-line -->
+		<div class="line vertical first"></div>
+		<div class="line vertical second"></div>
+		<div class="line vertical third"></div>
+		<div class="line vertical fourth"></div>
+
+		<!-- հորիզոնական grid-line -->
+		<div class="line horizontal first"></div>
+		<div class="line horizontal second"></div>
+		<div class="line horizontal third"></div>
+
+
+
+		<!-- Grid cell -->
+		<div class="gridCell"></div>
+	</div>
+</body>
+
+</html>

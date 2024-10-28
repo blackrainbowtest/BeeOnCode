@@ -1,0 +1,114 @@
+.line {
+	position: absolute;
+	opacity: 0.5;
+	display: none;
+}
+
+/* GRID LINE STYLE */
+#toggleLines:checked ~ .line {
+	display: block;
+}
+
+#toggleLines {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	width: 50px;
+	height: 50px;
+}
+
+#label {
+	position: absolute;
+	top: 80px;
+	left: 5px;
+}
+/* END GRID LINE STYLE */
+
+/* GRID CELL STYLE */
+.gridCell {
+	width: 150px;
+	height: 150px;
+	background-color: rgba(255, 166, 0, 0.582);
+	position: absolute;
+	z-index: -1;
+	top: calc(50% - (150px * 1 + 5px));
+	display: none;
+}
+
+#togglegridCell:checked ~ .gridCell
+{
+	display: block;
+}
+
+#togglegridCell:checked ~ .container > #secondItem
+{
+	opacity: .4;
+}
+
+#togglegridCell {
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	width: 50px;
+	height: 50px;
+}
+
+#labelgridCell {
+	position: absolute;
+	top: 80px;
+	right: 5px;
+}
+/* END GRID CELL STYLE */
+
+.vertical {
+	background-color: red;
+}
+
+.horizontal {
+	background-color: blue;
+}
+
+.line.vertical {
+	width: 5px;
+	height: 100%;
+}
+
+.line.horizontal {
+	width: 100%;
+	height: 5px;
+}
+
+.line.vertical.first {
+	left: calc(50% - (150px + 150px / 2 + 10px * 2) + 2.5px);
+}
+
+.line.vertical.second {
+	left: calc(50% - (150px / 2 * 1 + 10px * 1) + 2.5px);
+}
+
+.line.vertical.third {
+	left: calc(50% + (150px / 2 + 10px * 0) + 2.5px);
+}
+
+.line.vertical.fourth {
+	left: calc(50% + (150px * 1 + 150px / 2 + 10px * 1) + 2.5px);
+}
+
+.line.horizontal.first {
+	top: calc(50% - (150px * 1 + 10px * 1) - 2.5px);
+}
+
+.line.horizontal.second {
+	top: calc(50% - (150px * 0 + 10px * 0) - 2.5px);
+}
+
+.line.horizontal.third {
+	top: calc(50% - (150px * -1 + 10px * -1) - 2.5px);
+}
+
+/* ITEM STYLE */
+.item:hover {
+	font-size: 25px;
+	cursor: pointer;
+}
+/* END ITEM STYLE */
