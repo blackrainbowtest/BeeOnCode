@@ -8,6 +8,7 @@
     <style>
         /* Պետք է ճիշտ հերթականությամբ գրենք մեր ոճերը, սկզբում մեծը հետո փոքրը */
         /* screen >= 600x */
+        /* կարող ենք այն փոխարինել ուղղակի @media (min-width: 601px) */
         @media not all and (max-width: 600px) {
 
             /* Այս ոճերը կկիրառվեն, եթե էկրանի լայնությունը 600px-ից մեծ է */
@@ -52,9 +53,8 @@
             }
         }
 
-        @media screen,
-        print {
-
+        @media screen, print 
+        {
             /* Այս ոճերը կկիրառվեն և՛ էկրանին, և՛ տպման ժամանակ */
             body {
                 font-size: 16px;
@@ -62,9 +62,8 @@
             }
         }
 
-        @media (max-width: 600px),
-        (min-width: 1200px) {
-
+        @media (max-width: 600px),(min-width: 1200px) 
+        {
             /* Այս ոճերը կկիրառվեն, եթե էկրանի լայնությունը 600px-ից փոքր է կամ 1200px-ից մեծ */
             .container {
                 background-color: lightblue;
