@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Մկնինի իրադարձություններ</title>
+    <style>
+        #mouseInfo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            border: 1px solid #490505;
+            background-color: #f5caca;
+            font-family: Arial, sans-serif;
+            width: 250px;
+            border-radius: 5px;
+        }
+        #targetElement {
+            width: 300px;
+            height: 200px;
+            margin: 50px auto;
+            border: 2px solid rgb(16, 16, 29);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #a6e3eb;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mouseInfo">
+        <h3>Մկնիկի մասին տեղեկություն՝</h3>
+        <p><strong>Մկնիկի կոորդինատներ՝</strong> <span id="coords">(x:0, y:0)</span></p>
+        <p><strong>կարգավիճակը՝</strong> <span id="status">div ից դուրս է</span></p>
+    </div>
+
+    <div id="targetElement">
+        Մկնիկը կարող ես պահել իմ վրա
+    </div>
+
+    <script>
+        const mouseInfo = document.getElementById('mouseInfo');
+        const coordsDisplay = document.getElementById('coords');
+        const statusDisplay = document.getElementById('status');
+        const targetElement = document.getElementById('targetElement');
+
+        // Մկնիկի տեղաշարժի մշակիչ կարող ենք վեկալել x, y կոորդինատները
+        document.addEventListener('mousemove', (event) => {
+            const x = event.clientX;
+            const y = event.clientY;
+            coordsDisplay.textContent = `(x:${x}, y:${y})`;
+        });
+
+        // մկնիկի ընդգրկման մշակիչ
+        targetElement.addEventListener('mouseover', () => {
+            statusDisplay.textContent = 'Մկնիկը div -ի վրա է';
+            targetElement.style.backgroundColor = '#b2ebf2';
+        });
+
+        // Մկնիկի հեռացման մշակիչ
+        targetElement.addEventListener('mouseout', () => {
+            statusDisplay.textContent = 'Մկնիկը div ից դուրս է';
+            targetElement.style.backgroundColor = '#a6e3eb';
+        });
+    </script>
+</body>
+</html>
