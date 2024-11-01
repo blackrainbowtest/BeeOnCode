@@ -1,4 +1,17 @@
+
 // const fs = require('fs')
+// import {readFile} from 'fs'
+
+// readFile("db.json", 'utf8', (error, data) => {
+// 	if (error) {
+// 		console.log(error)
+// 		return
+// 	}
+// 	const regex = /\s/;
+// 	const text = "44444"
+// 	console.log(regex.test(text))
+// })
+
 import { readFile } from "fs";
 
 readFile("db.json", "utf8", (err, data) => {
@@ -20,3 +33,5 @@ readFile("db.json", "utf8", (err, data) => {
 
 //   console.log(users);
 });
+
+
