@@ -20,7 +20,7 @@ readFile("db.json", "utf8", (err, data) => {
     return;
   }
 
-  const regex = /^(\+?\d{3})?\s?[\(]?\d{2,3}[\)]?\s?\d{2}(\s|\-)?\d{2}(\s|\-)?\d{2}$/m;
+  const regex = /^(?:\+374|374)?\s?[\(]?\d{2,3}[\)]?\s?\d{2}(?:\s|\-)?\d{2}(?:\s|\-)?\d{2}$/m;
 
   const users = JSON.parse(data);
 
