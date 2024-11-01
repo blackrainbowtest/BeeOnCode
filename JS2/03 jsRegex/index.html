@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="container d-flex flex-column justify-cintent-center align-items-center p-4">
+		<div class="card" style="min-width: 600px;">
+			<div class="card-body">
+				<form>
+					<div class="form-group row align-items-start mb-2">
+						<label for="emailInput" class="col-sm-2 col-form-label">Email</label>
+						<div class="col-sm-10">
+							<input type="email" name="email" id="emailInput" class="form-control is-valid">
+							<div class="valid-feedback">
+								Looks good!
+							</div>
+						</div>
+					</div>
+					<div class="form-group row align-items-center mb-2">
+						<label for="passwordInput" class="col-sm-2 col-form-label">Password</label>
+						<div class="col-sm-10">
+							<input type="email" name="password" id="passwordInput" class="form-control is-valid">
+							<div class="valid-feedback">
+								Looks good!
+							</div>
+						</div>
+					</div>
+					<div class="form-group row align-items-center">
+						<label for="telephoneInput" class="col-sm-2 col-form-label">Tel:</label>
+						<div class="col-sm-10">
+							<input type="tel" name="telephone" id="telephoneInput" class="form-control is-invalid">
+							<div class="invalid-feedback">
+								Please provide a valid phone number
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-sm-10">
+							<button type="submit" class="btn btn-primary disabled">Sign up</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>
