@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<ul id="itemList">
+		<li>Առաջին li</li>
+		<li>Երկրորդ li</li>
+		<li>Երրորդ li</li>
+	</ul>
+
+	<div id="output"></div>
+
+	<script>
+		const itemList = document.getElementById('itemList');
+		const output = document.getElementById('output');
+
+		itemList.addEventListener('click', (event) => {
+			if (event.target.tagName === 'LI') {
+				output.textContent = `Դուք հենց նոր քլիկ արեցիք՝ ${event.target.textContent} -ին`;
+			}
+		});
+	</script>
+</body>
+
+</html>

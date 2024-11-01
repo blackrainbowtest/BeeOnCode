@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<input type="text" name="" id="textInput">
+	<script>
+		document.getElementById("textInput").addEventListener('input', (event) => {
+			console.log(`Ներկա պահին փոփոխված տվյալ: ${event.target.value}`);
+		});
+		document.getElementById("textInput").addEventListener('change', (event) => {
+			console.log(`Վերջնական փոփոխված տվյալ: ${event.target.value}`);
+		});
+		document.getElementById("textInput").addEventListener('beforeinput', (event) => {
+			console.log(`Մինչև մուտքագրված տառը կերևա: ${event.data}`);
+			if (event.data === "a") {
+				// Արգելակում ենք տառի մուտքագրումը եթե այն ա տառ է
+				event.preventDefault();
+			}
+		});
+	</script>
+</body>
+
+</html>

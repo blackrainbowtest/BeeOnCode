@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ստեղնաշարի ստեղների սեղմվածության օրինակ</title>
+</head>
+<body>
+    <h1>Ստեղնաշարի ստեղներ</h1>
+    <p>Պետք է բացել կոնսոլը և սեղմել ստեղնաշարի ստեղները</p>
+
+    <script>
+        document.addEventListener('keydown', (event) => {
+            console.log(`"${event.key}" ստեղնը սեղմված է (keydown)`);
+        });
+
+        document.addEventListener('keyup', (event) => {
+            console.log(`"${event.key}" ստեղնը բաց թողնվեց (keyup)`);
+        });
+
+        document.addEventListener('keypress', (event) => {
+            console.log(`"${event.key}" սեղմվել է (keypress) համարվում է հնացած իրադարփություն`);
+        });
+    </script>
+</body>
+</html>
