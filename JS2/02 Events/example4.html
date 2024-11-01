@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button id="myButton">Սեղմիր ինձ</button>
+    <script>
+        const button = document.getElementById('myButton');
+
+        button.onclick = () => {
+            alert('Առաջին մշակիչը onclick');
+        };
+
+        button.onclick = () => {
+            alert('Երկրորդ մշակիչը onclick');
+        };
+    </script>
+    <button id="myButton2">Սեղմիր ինձ</button>
+    <script>
+        const button2 = document.getElementById('myButton2');
+
+        button2.addEventListener('click', () => {
+            alert('Առաջին մշակիչը onclick');
+        });
+
+        button2.addEventListener('click', () => {
+            alert('Երկրորդ մշակիչը onclick');
+        });
+    </script>
+</body>
+
+</html>
