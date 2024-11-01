@@ -7,14 +7,14 @@ readFile("db.json", "utf8", (err, data) => {
     return;
   }
 
-  const regex = /(\+?\d{3})?\s?[\(]?\d{2,3}[\)]?\s?\d{2}(\s|\-)?\d{2}(\s|\-)?\d{2}/gm;
+  const regex = /^(\+?\d{3})?\s?[\(]?\d{2,3}[\)]?\s?\d{2}(\s|\-)?\d{2}(\s|\-)?\d{2}$/m;
 
   const users = JSON.parse(data);
 
   users.forEach((user) => {
     const isValidPhone = regex.test(user.Phone);
     console.log(
-      `Login: ${user.Login}, Phone: ${user.Phone}, Valid: ${isValidPhone}`
+      `Phone: ${user.Phone},\t Valid: ${isValidPhone}`
     );
   });
 
