@@ -11,16 +11,18 @@
 	   այլ կերպ ասած տվյալ պարագայում աշխատելու է 
 	   0%, 25%, 50%, 75%, 100%;
 	*/
-	animation: play 1s steps(6) infinite;
+	animation: play 1.2s steps(6) infinite;
 	/* border: 1px solid black; */
 }
 
 @keyframes play {
 	from {
 		background-position: 0;
+		margin-left: 1px;
 	}
-
+	
 	to {
 		background-position: -1560px;
+		margin-left: 100vw;
 	}
 }
