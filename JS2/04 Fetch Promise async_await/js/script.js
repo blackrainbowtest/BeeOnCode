@@ -5,6 +5,8 @@
 
 import { Pagination } from "./paginations.js";
 
-const newPagination = new Pagination(6, true)
+const newPagination = new Pagination(12, true)
 
 newPagination.load()
+
+x ??= "sdsdsds"

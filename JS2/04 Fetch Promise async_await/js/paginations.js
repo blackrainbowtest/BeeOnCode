@@ -60,6 +60,7 @@ export class Pagination {
         userImage.src = this.currentData[i].picture.large;
         const userName = createTag("h4");
         userName.innerText = `${this.currentData[i].name.first} ${this.currentData[i].name.last}`;
+        // userName.innerHTML = "<p>lalala</p>"
         const userEmail = createTag("span");
         userEmail.innerText = `${this.currentData[i].email}`;
         userDiv.append(userImage, userName, userEmail);
