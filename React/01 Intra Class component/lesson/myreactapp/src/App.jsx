@@ -45,9 +45,14 @@ class App extends React.Component {
                     <td>{user?.surname}</td>
                     <td>{user?.age}</td>
                     <td>
-                      <button className="btn btn-danger" onClick={(e) => {
-                        this.handleDelete(index)
-                      }}>Delete</button>
+                      <button
+                        className="btn btn-danger"
+                        onClick={(e) => {
+                          this.handleDelete(index);
+                        }}
+                      >
+                        Delete
+                      </button>
                     </td>
                   </tr>
                 );
