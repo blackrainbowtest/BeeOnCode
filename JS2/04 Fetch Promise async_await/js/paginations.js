@@ -1,10 +1,9 @@
 import { createTag } from "./utils.js";
 
-const RESCOUNT = 36
+const RESCOUNT = 36;
 
 export class Pagination {
-  url =
-    `https://randomuser.me/api/?results=${RESCOUNT}&inc=name,email,picture,location,gender`;
+  url = `https://randomuser.me/api/?results=${RESCOUNT}&inc=name,email,picture,location,gender`;
   usersData = [];
   currentPage = 0;
   pageCount = 1;
@@ -47,7 +46,7 @@ export class Pagination {
   render(reRender) {
     return new Promise((resolve, reject) => {
       const containerDiv = createTag("div", "d-flex row p-4");
-	  containerDiv.id = "containerDiv"
+      containerDiv.id = "containerDiv";
       this.currentData = this.usersData.slice(
         this.count * this.currentPage,
         this.count * this.currentPage + this.count
@@ -61,16 +60,17 @@ export class Pagination {
         userImage.src = this.currentData[i].picture.large;
         const userName = createTag("h4");
         userName.innerText = `${this.currentData[i].name.first} ${this.currentData[i].name.last}`;
+        // userName.innerHTML = "<p>lalala</p>"
         const userEmail = createTag("span");
         userEmail.innerText = `${this.currentData[i].email}`;
         userDiv.append(userImage, userName, userEmail);
         containerDiv.append(userDiv);
       }
       if (reRender) {
-		const oldContainer = document.getElementById("containerDiv")
-		if (oldContainer) {
-			oldContainer.remove()
-		}
+        const oldContainer = document.getElementById("containerDiv");
+        if (oldContainer) {
+          oldContainer.remove();
+        }
         root.prepend(containerDiv);
       } else {
         root.append(containerDiv);
@@ -91,7 +91,7 @@ export class Pagination {
         pagbutton.innerText = i + 1;
         pagbutton.addEventListener("click", () => {
           this.currentPage = i;
-		  this.render(true);
+          this.render(true);
         });
         paginationContainer.append(pagbutton);
       }
