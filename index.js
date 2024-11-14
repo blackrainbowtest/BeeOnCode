@@ -24,38 +24,41 @@
 // console.log(isBalanced(")(")); // false
 
 let isBalanced = function (x) {
-    // Стек для хранения открывающихся скобок
-    let stack = [];
-    // Объект для соответствия открывающих и закрывающих скобок
-    let brackets = {
-        '(': ')',
-        '[': ']',
-        '{': '}'
-    };
+  // Стек для хранения открывающихся скобок
+  let stack = [];
+  // Объект для соответствия открывающих и закрывающих скобок
+  let brackets = {
+    "(": ")",
+    "[": "]",
+    "{": "}",
+  };
 
-    for (let char of x) {
-        // Если встречаем открывающую скобку, добавляем ее в стек
-        if (brackets[char]) {
-            stack.push(char);
-        }
-        // Если встречаем закрывающую скобку
-        else if (Object.values(brackets).includes(char)) {
-            // Проверяем, соответствует ли она последней открывающей скобке
-            if (stack.length === 0 || brackets[stack.pop()] !== char) {
-                return false; // Если нет соответствия, скобки не сбалансированы
-            }
-        }
+  for (let char of x) {
+    // Если встречаем открывающую скобку, добавляем ее в стек
+    if (brackets[char]) {
+      stack.push(char);
     }
+    // Если встречаем закрывающую скобку
+    else if (Object.values(brackets).includes(char)) {
+      // Проверяем, соответствует ли она последней открывающей скобке
+      if (stack.length === 0 || brackets[stack.pop()] !== char) {
+        return false; // Если нет соответствия, скобки не сбалансированы
+      }
+    }
+  }
 
-    // Если стек пуст, значит, все скобки сбалансированы
-    return stack.length === 0;
-}
+  // Если стек пуст, значит, все скобки сбалансированы
+  return stack.length === 0;
+};
 
 // Примеры использования
-console.log(isBalanced("((((A))")); // false
-console.log(isBalanced("((A)(B))")); // true
-console.log(isBalanced("([])")); // true
-console.log(isBalanced("{[()]}")); // true
-console.log(isBalanced("{[(])}")); // false
-console.log(isBalanced("({[A]})")); // true
-console.log(isBalanced(")(")); // false
+// console.log(isBalanced("((((A))")); // false
+// console.log(isBalanced("((A)(B))")); // true
+// console.log(isBalanced("([])")); // true
+// console.log(isBalanced("{[()]}")); // true
+// console.log(isBalanced("{[(])}")); // false
+// console.log(isBalanced("({[A]})")); // true
+// console.log(isBalanced(")(")); // false
+
+
+console.log("Բարև աշխարհ");
