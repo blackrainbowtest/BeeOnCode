@@ -63,3 +63,14 @@ let isBalanced = function (x) {
 
 console.log("Բարև աշխարհ");
 
+
+
+const f1 = function (a) 
+{
+  return 
+  (
+    a
+  )
+}(5)
+
+console.log(f1);
