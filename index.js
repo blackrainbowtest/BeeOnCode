@@ -1,80 +1,15 @@
-// let isBalanced = function (x) {
-//     let balance = 0; // Счетчик для отслеживания сбалансированности
+const pizza = {
+  p1: 1,
+  p2: 2,
+  p3: 3,
+}
 
-//     for (let char of x) {
-//         if (char === '(') {
-//             balance++; // Увеличиваем счетчик для открывающей скобки
-//         } else if (char === ')') {
-//             balance--; // Уменьшаем счетчик для закрывающей скобки
-//         }
+let arr = Object.entries(pizza)
 
-//         // Если в любой момент счетчик меньше 0, это значит, что закрывающая скобка появилась раньше открывающей
-//         if (balance < 0) {
-//             return false;
-//         }
-//     }
+// console.log(arr);
 
-//     // В конце проверяем, что все открывающие скобки закрыты
-//     return balance === 0;
-// }
+arr = arr.map(([key, elm]) => {
+  return [key, elm * 2]
+})
 
-// console.log(isBalanced("((((A))")); // false
-// console.log(isBalanced("((A)(B))")); // true
-// console.log(isBalanced("()")); // true
-// console.log(isBalanced(")(")); // false
-
-let isBalanced = function (x) {
-  // Стек для хранения открывающихся скобок
-  let stack = [];
-  // Объект для соответствия открывающих и закрывающих скобок
-  let brackets = {
-    "(": ")",
-    "[": "]",
-    "{": "}",
-  };
-
-  for (let char of x) {
-    // Если встречаем открывающую скобку, добавляем ее в стек
-    if (brackets[char]) {
-      stack.push(char);
-    }
-    // Если встречаем закрывающую скобку
-    else if (Object.values(brackets).includes(char)) {
-      // Проверяем, соответствует ли она последней открывающей скобке
-      if (stack.length === 0 || brackets[stack.pop()] !== char) {
-        return false; // Если нет соответствия, скобки не сбалансированы
-      }
-    }
-  }
-
-  // Если стек пуст, значит, все скобки сбалансированы
-  return stack.length === 0;
-};
-
-// Примеры использования
-// console.log(isBalanced("((((A))")); // false
-// console.log(isBalanced("((A)(B))")); // true
-// console.log(isBalanced("([])")); // true
-// console.log(isBalanced("{[()]}")); // true
-// console.log(isBalanced("{[(])}")); // false
-// console.log(isBalanced("({[A]})")); // true
-// console.log(isBalanced(")(")); // false
-
-
-console.log("Բարև աշխարհ");
-
-
-
-const f1 = function (a) 
-{
-  return 
-  (
-    a
-  )
-}(5)
-
-console.log(f1);
-
-console.log([1, 2, 3, 4].copyWithin())
-
-
+console.log(Object.fromEntries(arr));
