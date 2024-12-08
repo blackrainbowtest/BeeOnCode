@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------ */
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #555252;
+}
+
+#TLBody {
+    width: 300px;
+    height: 600px;
+    background-color: #2a2a2a;
+    border: 3px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    transition: 1s;
+}
+
+#greenCirc {
+    background-color: rgb(0, 50, 0);
+}
+#yellowCirc {
+    background-color: rgb(50, 50, 0);
+}
+#redCirc {
+    background-color: rgb(50, 0, 0);
+}
+
+#greenCirc.active {
+    background-color: rgb(0, 200, 0);
+}
+#yellowCirc.active {
+    background-color: rgb(200, 200, 0);
+}
+#redCirc.active {
+    background-color: rgb(200, 0, 0);
+}
