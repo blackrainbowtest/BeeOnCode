@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // function tviStugum(miliseconds) {
 // 	return new Promise((resolve, reject) => {
 // 		// if (miliseconds > 3000 && miliseconds < 500) {
@@ -33,3 +34,8 @@ function step2() {
 }
 
 step1().then(step2).then(() => console.log("Ավարտվեց!"));
+=======
+name: Աննա  
+age: 20  
+subjects: Մաթեմատիկա, Անգլերեն, Պատմություն
+>>>>>>> c9f1aea41dcaa6547592339ca524b434f3c40167
