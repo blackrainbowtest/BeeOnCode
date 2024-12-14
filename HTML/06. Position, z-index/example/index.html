@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		#d1, #d2, #d3, #d4 {
+			width: 200px;
+			height: 200px;
+			background-color: aquamarine;
+			clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 40px;
+			font-weight: bolder;
+		}
+		#d2 {
+			left: 150px;
+			background-color: chocolate;
+		}
+		#d3 {
+			left: calc(150px * 2);
+			background-color: rgb(117, 210, 30);
+		}
+		#d4 {
+			left: calc(150px * 3);
+			background-color: rgb(210, 30, 99);
+		}
+
+		#d5, #d6, #d7, #d8 {
+			width: 200px;
+			height: 200px;
+			background-color: aquamarine;
+			position: absolute;
+			top: 50%;
+			left: 250px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 40px;
+			font-weight: bolder;
+		}
+
+		#d6 {
+			top: 60%;
+			left: calc(350px);
+			background-color: #0951a3;
+		}
+
+		#d7 {
+			top: 50%;
+			left: calc(450px);
+			background-color: #ee7300;
+		}
+		#d8 {
+			top: 60%;
+			left: calc(550px);
+			background-color: #6b0680;
+		}
+
+	</style>
+</head>
+<body>
+<div style="background-color: rgb(223, 247, 139); height: 100vh;">
+	<div id="d1">ML1</div>
+	<div id="d2">ML1</div>
+	<div id="d3">ML1</div>
+	<div id="d4">ML1</div>
+
+	<div id="d5">1</div>
+	<div id="d6">2</div>
+	<div id="d7">3</div>
+	<div id="d8">4</div>
+</div>
+</body>
+</html>
