@@ -182,3 +182,4 @@ function deleteStatus(index) {
     renderStatus();
   }
 }
+
