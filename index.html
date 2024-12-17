@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Մկնիկը և գնդակները</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      background-color: #f0f8ff;
+    }
+
+    .ball {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      animation: fadeOut 1s ease-out forwards;
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <!-- <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div> -->
-        <header>This is my lovely blog</header>
-        <article>
-            <h1>
-                Other things
-            </h1>
-            <p>
-                Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis
-                est, posuere sit amet dapibus ut, facilisis sed est.
-            </p>
-        </article>
-        <aside>
-            <h1>My article</h1>
-            <p>
-                Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
-                tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci
-                vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-                convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
-                eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo
-                et a urna. Ut id ornare felis, eget fermentum sapien.
-            </p>
-            <br>
-            <p>
-                Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis
-                est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget
-                aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed
-                lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget
-                purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
-        </aside>
-        <footer>Contact me@example.com</footer>
-    </div>
-    <script src="index.js"></script>
-</body>
+  <script>
+    document.addEventListener("mousemove", function (event) {
+      const ball = document.createElement("div");
+      ball.className = "ball";
+	  ball.style.backgroundColor = `rgb(255, 105, ${Math.random() * 256 + 15}, 0.7)`
 
+      // Устанавливаем позицию шарика
+      ball.style.left = `${event.clientX}px`;
+      ball.style.top = `${event.clientY}px`;
+
+      document.body.appendChild(ball);
+
+      // Удаляем шарик после завершения анимации
+      setTimeout(() => {
+        ball.remove();
+      }, 1000);
+    });
+  </script>
+</body>
 </html>
