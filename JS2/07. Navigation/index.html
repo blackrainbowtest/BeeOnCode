@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<style>
+		#gameBoard div {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 30px;
+			cursor: pointer;
+		}
+	</style>
 </head>
+
 <body>
-	<div id="parent">
+	<!-- <div id="parent">
 		<p>Առաջին տեքստ</p>
 		<p>Երկրորդ տեքստ</p>
 		<p>Երրորդ տեքստ</p>
@@ -20,6 +34,13 @@
 		  child.textContent = "Նոր տեքստ"; // Փոխում ենք պարունակությունը
 		  child.style.color = "blue"; // Փոխում ենք գույնը
 		}
-	  </script>	  
+	  </script>	   -->
+
+	<h2>Խաղ՝ Խաչեր և Զրոներ</h2>
+	<div id="gameBoard" style="display: grid; grid-template-columns: repeat(3, 100px); grid-gap: 5px;">
+	</div>
+	<p id="winner" style="color: green; font-size: 20px;"></p>
+	<script src="game.js"></script>
 </body>
+
 </html>
