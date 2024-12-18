@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="parent">
+		<p>Առաջին տեքստ</p>
+		<p>Երկրորդ տեքստ</p>
+		<p>Երրորդ տեքստ</p>
+	  </div>
+	  
+	  <script>
+		const parent = document.getElementById("parent");
+		const children = parent.children;
+	  
+		for (let child of children) {
+		  child.textContent = "Նոր տեքստ"; // Փոխում ենք պարունակությունը
+		  child.style.color = "blue"; // Փոխում ենք գույնը
+		}
+	  </script>	  
+</body>
+</html>
