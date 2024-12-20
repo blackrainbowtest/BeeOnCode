@@ -25,7 +25,7 @@
         "fatching",
         "todos"
     ],
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Default Dark Modern",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },

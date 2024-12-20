@@ -1,0 +1,1 @@
+element.removeAttribute(attributeName)
