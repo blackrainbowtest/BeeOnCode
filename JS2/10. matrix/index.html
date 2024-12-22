@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Крестики-Нолики</title>
+	<style>
+		#game {
+			display: grid;
+			grid-template-columns: repeat(3, 100px);
+			grid-template-rows: repeat(3, 100px);
+			gap: 5px;
+		}
+
+		.cell {
+			width: 100px;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2rem;
+			border: 1px solid #000;
+			cursor: pointer;
+		}
+
+		.cell.taken {
+			cursor: not-allowed;
+			background-color: #ddd;
+		}
+
+		#controls {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Крестики-Нолики</h1>
+	<div id="game"></div>
+	<div id="controls">
+		<button id="randomMode">Թույլ բոտ</button>
+		<button id="smartMode">Իդեալական բոտ</button>
+		<p id="status"></p>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
