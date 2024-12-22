@@ -1,0 +1,84 @@
+/* Общие настройки */
+body {
+    margin: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Контейнер анимации */
+  .animation-container {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(to bottom, #FF6A00, #FFD700);
+    border-radius: 50%;
+    overflow: hidden;
+    animation: backgroundChange 5s infinite alternate;
+  }
+  
+  /* Солнце */
+  .sun {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #FFD700, #FF6A00);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: sunMove 5s infinite alternate;
+  }
+  
+  /* Луна */
+  .moon {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #FFFFFF, #B0C4DE);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: moonMove 5s infinite alternate;
+  }
+  
+  /* Анимация градиента */
+  @keyframes backgroundChange {
+    0% {
+      background: linear-gradient(to bottom, #FF6A00, #FFD700);
+    }
+    100% {
+      background: linear-gradient(to bottom, #001D3D, #003566);
+    }
+  }
+  
+  /* Анимация солнца */
+  @keyframes sunMove {
+    0% {
+      top: 20%;
+      opacity: 1;
+    }
+    100% {
+      top: 50%;
+      opacity: 0;
+    }
+  }
+  
+  /* Анимация луны */
+  @keyframes moonMove {
+    0% {
+      top: 60%;
+      opacity: 0;
+    }
+    100% {
+      top: 30%;
+      opacity: 1;
+    }
+  }
+  
