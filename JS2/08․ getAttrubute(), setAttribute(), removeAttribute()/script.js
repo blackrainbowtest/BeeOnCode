@@ -1,7 +1,7 @@
 const game = document.getElementById('game');
 const rows = 8; // Размер поля
 const cols = 8;
-const mines = 10; // Количество мин
+const mines = 1; // Количество мин
 
 // Խաղային դաշտի գեներացիա
 function createGame() {
