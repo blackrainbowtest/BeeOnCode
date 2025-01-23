@@ -180,7 +180,7 @@ function updateBoard() {
 }
 
 // Խաղի ռեժիմների փոփոխություն
-randomModeButton.addEventListener('click', () => {
+randomModeButton.addEventListener('click', () => {git 
 	botMode = 'random';
 	createGame();
 });
