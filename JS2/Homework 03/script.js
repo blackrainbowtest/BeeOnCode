@@ -62,7 +62,7 @@ const start = async function () {
     fRed()
     fYellow()
     fGreen()
-    fYellow()
+    await fYellow()
   }
 }
 
