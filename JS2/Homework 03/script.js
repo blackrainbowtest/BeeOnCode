@@ -59,8 +59,8 @@ const fGreen = async function () {
 // Լուսացույցի ֆունկցիա
 const start = async function () {
   while (true) {
-    fRed()
-    fYellow()
+    await fRed()
+    await fYellow()
     fGreen()
     await fYellow()
   }
