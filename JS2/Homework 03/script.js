@@ -61,7 +61,7 @@ const start = async function () {
   while (true) {
     await fRed()
     await fYellow()
-    fGreen()
+    await fGreen()
     await fYellow()
   }
 }
