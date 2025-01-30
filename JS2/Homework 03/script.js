@@ -68,4 +68,3 @@ const start = async function () {
 
 // ծրագրի սկիզբ
 start()
-
